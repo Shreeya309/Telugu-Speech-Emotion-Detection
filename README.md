@@ -102,9 +102,3 @@ The performance metrics shown in the interface are fixed example values and shou
 - Add confusion matrix and actual classification metrics.
 - Explore deep learning approaches such as CNN and LSTM.
 - Improve audio preprocessing and model generalization.
-
-## Author
-
-**Shreeya Pishke**
-
-GitHub: https://github.com/Shreeya309
