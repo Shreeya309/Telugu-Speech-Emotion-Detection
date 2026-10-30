@@ -1,51 +1,110 @@
-# Telugu-Speech-Emotion-Detection
+# Telugu Speech Emotion Analysis
+
 ## Overview
 
-Telugu Speech Emotion Detection is a machine learning-based web application that analyzes Telugu speech recordings and predicts the speaker's emotion. The application provides an interactive interface for uploading audio files, extracting speech features, visualizing audio characteristics, and displaying emotion prediction results.
+Telugu Speech Emotion Analysis is an interactive audio-analysis application developed using Python and Streamlit.
 
-Built using Python and Streamlit, the project combines audio signal processing with machine learning to demonstrate the complete workflow of speech emotion recognition.
+The application allows users to upload Telugu speech recordings, extract acoustic features, visualize audio characteristics, and explore illustrative emotion-analysis outputs.
 
-## Features
+It uses Librosa for audio processing and provides interactive visualizations to help understand speech-related acoustic features.
 
-* Upload Telugu speech recordings in WAV, MP3, or OGG format.
-* Extract audio features such as MFCC, Zero Crossing Rate, and RMS Energy.
-* Predict emotions using a Random Forest machine learning model.
-* Visualize audio waveforms and MFCC feature maps.
-* Display prediction confidence through interactive charts.
-* User-friendly Streamlit interface for real-time emotion analysis.
+## Key Features
 
-## Technologies Used
+### 1. Audio Upload
+- Supports WAV, MP3, and OGG audio formats.
+- Allows users to upload speech recordings for analysis.
 
-* Python
-* Streamlit
-* Scikit-learn
-* Librosa
-* NumPy
-* Pandas
-* Plotly
-* Matplotlib
+### 2. Audio Feature Extraction
+Extracts acoustic features including:
+- Mel-Frequency Cepstral Coefficients (MFCC)
+- Zero Crossing Rate (ZCR)
+- Root Mean Square (RMS) Energy
+
+### 3. Audio Visualization
+- Displays audio waveform visualizations.
+- Provides MFCC feature visualizations.
+- Helps explore acoustic patterns in speech recordings.
+
+### 4. Emotion Analysis Interface
+- Displays illustrative emotion-score outputs.
+- Provides interactive charts through Plotly.
+- Presents audio analysis results through a Streamlit interface.
+
+## Technology Stack
+
+| Category | Technologies |
+|---|---|
+| Programming Language | Python |
+| Application Framework | Streamlit |
+| Audio Processing | Librosa |
+| Numerical Processing | NumPy |
+| Visualization | Plotly, Matplotlib |
+| Machine Learning Library | Scikit-learn |
+
+## Project Structure
+
+```text
+TeluguEmotionRecognizer/
+├── app.py
+├── feature_extraction.py
+├── model.py
+├── preprocess.py
+└── utils.py
+```
 
 ## How It Works
 
-1. Upload a Telugu speech audio file.
-2. The application preprocesses the audio and extracts relevant speech features.
-3. A trained Random Forest classifier analyzes the extracted features.
-4. The predicted emotion and confidence scores are displayed along with interactive visualizations of the audio signal and extracted features.
+1. The user uploads a speech recording.
+2. The application loads and processes the audio using Librosa.
+3. Acoustic features such as MFCC, ZCR, and RMS Energy are extracted.
+4. Audio waveform and feature visualizations are generated.
+5. The application displays illustrative emotion-score outputs.
 
-## Learning Outcomes
+## Installation and Setup
 
-This project helped strengthen my understanding of:
+### 1. Clone the Repository
 
-* Audio signal processing
-* Feature extraction using Librosa
-* Machine learning with Scikit-learn
-* Data visualization with Plotly and Matplotlib
-* Building interactive web applications using Streamlit
+```bash
+git clone https://github.com/Shreeya309/Telugu-Speech-Emotion-Detection.git
+```
+
+### 2. Navigate to the Project Directory
+
+```bash
+cd Telugu-Speech-Emotion-Detection/TeluguEmotionRecognizer
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install streamlit librosa numpy plotly matplotlib scikit-learn
+```
+
+### 4. Run the Application
+
+```bash
+streamlit run app.py
+```
+
+## Current Limitations
+
+The current implementation is an audio feature extraction and visualization prototype.
+
+The existing model initialization uses randomly generated data rather than a trained model using labelled Telugu speech recordings. The displayed emotion scores are illustrative and have not been validated using a real test dataset.
+
+The performance metrics shown in the interface are fixed example values and should not be interpreted as actual model evaluation results.
 
 ## Future Improvements
 
-* Train the model on a larger Telugu speech emotion dataset.
-* Implement deep learning models such as LSTM or CNN for improved accuracy.
-* Support multilingual speech emotion recognition.
-* Deploy the application on a cloud platform for public access.
-* Add model evaluation metrics and performance comparison.
+- Integrate a properly labelled Telugu speech-emotion dataset.
+- Implement a reproducible Random Forest training pipeline.
+- Train and evaluate the model using real audio samples.
+- Add confusion matrix and actual classification metrics.
+- Explore deep learning approaches such as CNN and LSTM.
+- Improve audio preprocessing and model generalization.
+
+## Author
+
+**Shreeya Pishke**
+
+GitHub: https://github.com/Shreeya309
